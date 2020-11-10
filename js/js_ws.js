@@ -17,26 +17,25 @@ $(document).ready(function() {
 	});
 });
 
-function getAPIData(inputText) {
-  $.ajax({
-    'url': 'https://api.blockcypher.com/v1/btc/main/blocks',
-    'type': 'GET',
-    'dataType': 'json',
-    'data': {'number': inputText},
-    'success': function(response) {
-      console.log(response);
-    }, 'error': function(response) {
-      console.log(response.statusText);
-    }
-  });
-};
+$(function() {
+        var _myContentArea = document.getElementById("myContentArea");
+        var _mySearchButton = document.getElementById("query");
+        _mySearchButton.onclick = getData;
 
-$("#query").click(function() {
-  // our inputText is going to be equal to the value of the input field
-  var inputText = $("#searchBar").val();
-  
-  // then, as long as our input field isn't blank, let's call that function above and pass in the inputText as an argument
-  if (inputText !== "") {
-    getAPIData(inputText);
-  }
-});
+        function getData() {
+        var _mySearchField = document.getElementById("searchBar");
+            
+            $.ajax({
+            url: "https://blockchain.info/rawblock/"+_mySearchField.value,
+            method: "GET",
+            dataType: "json",
+            success: function(data) {
+              var str = "";          
+              
+              str +='hash: '+data.rawblock[0].description+ '<br> block_index : '+ data.rawblock[9].description;
+              _myContentArea.innerHTML = str;
+            }
+            });
+        }
+
+    });
