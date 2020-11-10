@@ -31,8 +31,9 @@ $(function() {
             dataType: "json",
             success: function(data) {
               var str = "";          
-              
-              str +='hash: '+data.rawblock[0].description+ '<br> block_index : '+ data.rawblock[9].description;
+              for(var i= 0; i < data.rawblock.length; i++) {
+                  str += data.rawblock[i].value + '<br>';
+              }
               _myContentArea.innerHTML = str;
             }
             });
