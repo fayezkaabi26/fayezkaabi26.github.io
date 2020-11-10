@@ -32,7 +32,7 @@ $(function() {
             success: function(data) {
               var str = "";          
               for(var i= 0; i < data.rawblock.length; i++) {
-                  str += data.rawblock[i].value + '<br>';
+                  str += data.rawblock[i].value.toString() + '<br>';
               }
               _myContentArea.innerHTML = str;
             }
