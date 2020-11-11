@@ -16,10 +16,5 @@ $(document).ready(function() {
 		}
 	});
 
-  function myFunction() {
-   var input = document.getElementById("searchBar");
-   document.getElementById("myContentArea").innerHTML = input.value;
-}
-
 });
 
