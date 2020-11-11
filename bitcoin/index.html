@@ -1,34 +1,68 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<div class="container">
 			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 			<link rel = "stylesheet" href="style/style.css">
-			<title> Bitcoin </title>
-		</div>			
+			<title> Bitcoin </title>			
 	</head>
 	<body>
-		<nav class="navbar navbar-expand-lg bg-dark navbar-dark ">
-			<div class="row">
-				<div class="col">
-  					<ul class="navbar-nav">
-    					<li class="nav-item">
-      						<a class="nav-link" href="../index.html">Homepage</a>
-    					</li>
-    					<li class="nav-item">
-      						<a class="nav-link" href="#">Bitcoin</a>
-    					</li>
-    				</ul>
+		<header class="navbar navbar-expand-lg bg-dark navbar-dark" role="header">
+			<div class="container">
+
+				<!--Navbar-->
+<nav class="navbar navbar-expand-lg navbar-light blue-grey lighten-5 mb-4">
+
+  <!-- Navbar brand -->
+  <a class="navbar-brand" href="#">Block Explorer</a>
+
+  <!-- Collapse button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
+      class="navbar-toggler-icon"></span></button>
+
+  <!-- Collapsible content -->
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+    <!-- Links -->
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Bitcoin<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../index.html">Home</a>
+      </li>
+    </ul>
+    <!-- Links -->
+
+    <!-- Search form -->
+    <form class="form-inline">
+      <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+    </form>
+  </div>
+  <!-- Collapsible content -->
+</nav>
+
+				<div class="row">
+					<div class="col">
+  						<ul class="navbar-nav">
+    						<li class="nav-item">
+      							<a class="nav-link" href="../index.html">Homepage</a>
+    						</li>
+    						<li class="nav-item">
+      							<a class="nav-link" href="#">Bitcoin</a>
+    						</li>
+    					</ul>
+    				</div>
+    				<div class="col-auto">
+    					<form class="form-inline my-2 my-lg-0">
+      						<input class="form-control mr-sm-2" type="text" placeholder="Search">
+      						<button class="btn btn-success my-2 my-sm-0" type="button">Search</button>
+    					</form>
+    				</div>
     			</div>
-    			<div class="col-auto">
-    				<form class="form-inline my-2 my-lg-0">
-      					<input class="form-control mr-sm-2" type="text" placeholder="Search">
-      					<button class="btn btn-success my-2 my-sm-0" type="button">Search</button>
-    				</form>
-    			</div>
-    		</div>
-		</nav>
+			</div>
+		</header>
 
 		<main>
 			<section>
