@@ -16,6 +16,10 @@ $(document).ready(function() {
 		}
 	});
 
-  var actual_number_of_blocks =
+  function myFunction() {
+   var input = document.getElementById("searchBar");
+   document.getElementById("myContentArea").innerHTML = input.value;
+}
+
 });
 
