@@ -15,28 +15,7 @@ $(document).ready(function() {
 			$('#bitcoin_latest_block').append(err+" N/A");
 		}
 	});
+
+  var actual_number_of_blocks =
 });
 
-$(function() {
-        var _myContentArea = document.getElementById("myContentArea");
-        var _mySearchButton = document.getElementById("query");
-        _mySearchButton.onclick = getData;
-
-        function getData() {
-        var _mySearchField = document.getElementById("searchBar");
-            
-            $.ajax({
-            url: "https://blockchain.info/rawblock/"+_mySearchField.value,
-            method: "GET",
-            dataType: "json",
-            success: function(data) {
-              var str = "";          
-              for(var i= 0; i < data.rawblock.length; i++) {
-                  str += data.rawblock[i].value.toString() + '<br>';
-              }
-              _myContentArea.innerHTML = str;
-            }
-            });
-        }
-
-    });
